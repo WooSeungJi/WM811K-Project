@@ -3,8 +3,8 @@
 경희대학교 소프트웨어랩(EE370) Term Project입니다. WM-811K 웨이퍼 맵을 정상 패턴을 포함한 9개 유형으로 분류하고, 결함의 위치·밀도·형상을 수치화한 모델 4종과 이미지 기반 CNN 2종의 성능을 비교했습니다. 소프트웨어랩 7강 ML의 분류와 8강 CNN의 합성곱·풀링을 적용했습니다.
 
 - 저장소: [WooSeungJi/WM811K-Project](https://github.com/WooSeungJi/WM811K-Project)
-- 재현용 노트북: [Ram_절약_WM_811K_Wafer_Map.ipynb](Ram_%EC%A0%88%EC%95%BD_WM_811K_Wafer_Map.ipynb)
-- 초기 실험: [머신러닝_WM_811K_Wafer_Map.ipynb](%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D_WM_811K_Wafer_Map.ipynb)
+- 재현·제출용 노트북: [Ram_절약_WM_811K_Wafer_Map.ipynb](Ram_%EC%A0%88%EC%95%BD_WM_811K_Wafer_Map.ipynb) — 전체 실험과 저장된 실행 결과를 담은 파일입니다. 제출 ZIP의 `src/`에 이 파일을 넣습니다.
+- 초기 실험: [머신러닝_WM_811K_Wafer_Map.ipynb](%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D_WM_811K_Wafer_Map.ipynb) — 초기 CNN 학습 기록입니다. 15절은 시각화 제목으로 끝나며, 재현·제출에는 위 노트북을 사용합니다.
 
 ## 데이터와 실험 설계
 
