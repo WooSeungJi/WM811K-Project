@@ -57,6 +57,18 @@ Light CNN의 Macro F1이 0.8663으로 가장 높았고, 특징 기반 모델에�
 
 Edge-Ring 사례(테스트 샘플 31806)에서 Light CNN과 Random Forest는 모두 Edge-Ring을 예측했습니다. 영역별 결함률은 중심부 3.04%, 외곽부 20.19%로, 외곽에 결함이 집중된 모습을 원본 맵과 결함 마스크에서 함께 확인했습니다. 이 사례에서는 외곽부 공정 균일도와 웨이퍼 이송 조건을 추가 점검 항목으로 제안했습니다.
 
+## 개발 과정과 커밋 이력
+
+Colab에서 저장한 노트북의 코드 변경을 기준으로 주요 작업을 정리했습니다.
+
+- **데이터 탐색** — 초기 노트북에 데이터 로드, 결함 라벨 추출, 클래스 분포 확인 코드 추가. [`cc81f82`](https://github.com/WooSeungJi/WM811K-Project/commit/cc81f82db31382baee5f118d4f4b58ed3919b6d6)
+- **메모리 절약형 CNN 실험** — 정상 클래스 다운샘플링과 배치 단위 데이터 로딩을 적용한 Light CNN 노트북 추가. [`d0bd7d0`](https://github.com/WooSeungJi/WM811K-Project/commit/d0bd7d06c2de30245d465b48f1fde76811f5ade6)
+- **특징 기반 실험** — 결함의 밀도·위치·형상 특징을 추출하고 Random Forest를 학습·평가하는 코드 추가. [`8b95f59`](https://github.com/WooSeungJi/WM811K-Project/commit/8b95f59290eb9e94d98d39d8e9f73b0e5588b10f)
+- **모델 비교 확대** — 특징 기반 모델 4종과 ResNet50 실험을 정리하고 6개 모델의 비교표·그래프 생성 코드 추가. [`80d8007`](https://github.com/WooSeungJi/WM811K-Project/commit/80d8007f8d19155c93a142953cb95ddffdfef141)
+- **Edge-Ring 품질 분석** — 저장 모델로 샘플을 예측하고 결함 마스크·영역별 특징을 시각화해 리포트 예시 생성. [`7c19ac5`](https://github.com/WooSeungJi/WM811K-Project/commit/7c19ac504caec118f7890f248a283fb881e12e87)
+
+[전체 커밋 이력 보기](https://github.com/WooSeungJi/WM811K-Project/commits/main/)
+
 ## AI 활용 및 검증
 
 ChatGPT(Codex)를 계획서와 README 초안 정리, 노트북 코드 확인, 저장된 Light CNN의 샘플 추론 검증에 사용했습니다. README의 경로·설정·주요 지표는 노트북 코드와 기존 실행 출력에서 확인했고, 저장된 모델에 별도의 WM-811K 샘플 한 장을 넣어 상위 3개 예측이 나오는지 확인했습니다.
